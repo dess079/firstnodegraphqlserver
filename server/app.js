@@ -1,12 +1,13 @@
-const express = require('express');
-const graphglHTTP = require('express-graphql');
+var express = require('express');
+var { graphqlHTTP } = require('express-graphql'); // CommonJS
+
 
 const app = express();
 const port = 4000;
 
 // Use graphiql 
-app.use('/graphql', graphglHTTP(
-    { schema:schema,
+app.use('/graphql', graphqlHTTP(
+    { 
       graphiql:true
     }
 )); 
