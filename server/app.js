@@ -8,10 +8,10 @@ const port = 4000;
 // Use graphiql 
 app.use('/graphql', graphqlHTTP(
     { 
-      graphiql:true
+      graphiql:true 
     }
 )); 
- 
+  
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 })
